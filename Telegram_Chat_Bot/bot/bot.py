@@ -14,7 +14,7 @@ class Bot:
     def setup_handlers(self):
         self.application.add_handler(CommandHandler("start", self.handlers.start))
         self.application.add_handler(CommandHandler("help", self.handlers.help_command))
-        self.application.add_handler(CommandHandler("menu", self.handlers.start))  # Добавляем обработчик для /menu
+        self.application.add_handler(CommandHandler("menu", self.handlers.start))  
         self.application.add_handler(CallbackQueryHandler(self.handlers.button_handler))
         self.application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, self.handlers.handle_message))
 
