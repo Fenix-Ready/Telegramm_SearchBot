@@ -4,7 +4,7 @@ import time
 import re
 import logging
 from browser.browser import Browser
-from selenium.webdriver.common.by import By  # Добавьте этот импорт
+from selenium.webdriver.common.by import By  
 
 logger = logging.getLogger(__name__)
 
@@ -55,6 +55,6 @@ class Search:
                 break
 
         if response_text and response_text[-1] not in '.!?':
-            response_text = re.sub(r'\s*[^.!?]*$', '', response_text.strip())  # Исправлено здесь
+            response_text = re.sub(r'\s*[^.!?]*$', '', response_text.strip()) 
 
         return response_text
